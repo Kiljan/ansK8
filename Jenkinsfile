@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Run ansible playbook with K8 config') {
             steps {
-                sh "ansible-playbook -i ${ANSPATH}/inventories/test/hosts -u vv ${ANSPATH}/K8_play.yml"
+                sh "ansible-playbook -i ${ANSPATH}/inventories/test/hosts -u vv ${ANSPATH}/k8_play.yml"
             }
         }
     }
