@@ -1,0 +1,31 @@
+- name: Copy containerd script
+  copy:
+    src: "con.sh"
+    dest: /home/vv/con.sh
+    mode: '0711'
+
+- name: Copy kube script
+  copy:
+    src: "kube.sh"
+    dest: /home/vv/kube.sh
+    mode: '0711'
+
+- name: install containerd
+  shell: sudo /home/vv/con.sh
+
+- name: install kube
+  shell: sudo /home/vv/kube.sh
+
+- name: Copy correct service for kubelt to run
+  copy:
+    src: "10-kubeadm.conf"
+    dest: /usr/lib/systemd/system/kubelet.service.d/10-kubeadm.conf
+    mode: '0644'
+
+- name: Stop service cron on debian, if running
+  systemd:
+    daemon_reload: true
+    name: kubelet
+    state: restarted
+
+

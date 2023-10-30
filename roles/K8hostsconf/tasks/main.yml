@@ -1,0 +1,4 @@
+- name: Configure Keepalive
+  copy:
+    src: "hosts"
+    dest: /etc/hosts
