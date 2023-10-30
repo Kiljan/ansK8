@@ -1,0 +1,11 @@
+---
+- name: Set up env
+  hosts: all
+  become: true
+  gather_facts: false
+
+  roles:
+  - K8hostsconf
+  - K8firewall
+  - K8setScripts
+

@@ -1,0 +1,2 @@
+server-master   ansible_host=10.17.3.56
+server-node1    ansible_host=10.17.3.57
