@@ -10,10 +10,10 @@
     dest: /home/vv/kube.sh
     mode: '0711'
 
-# - name: install containerd
-#   command: sh /home/vv/con.sh
+- name: install containerd
+  command: sh /home/vv/con.sh
 
-# - name: install kube
-#   command: sh /home/vv/kube.sh
+- name: install kube
+  command: sh /home/vv/kube.sh
 
 
