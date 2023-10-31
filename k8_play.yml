@@ -1,5 +1,5 @@
 ---
-- name: Set up env
+- name: Set up K8S env
   hosts: all
   become: true
   gather_facts: false
