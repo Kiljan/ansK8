@@ -11,21 +11,9 @@
     mode: '0711'
 
 - name: install containerd
-  shell: sudo /home/vv/con.sh
+  command: sh /home/vv/con.sh
 
 - name: install kube
-  shell: sudo /home/vv/kube.sh
-
-- name: Copy correct service for kubelt to run
-  copy:
-    src: "10-kubeadm.conf"
-    dest: /usr/lib/systemd/system/kubelet.service.d/10-kubeadm.conf
-    mode: '0644'
-
-- name: Stop service cron on debian, if running
-  systemd:
-    daemon_reload: true
-    name: kubelet
-    state: restarted
+  command: sh /home/vv/kube.sh
 
 
