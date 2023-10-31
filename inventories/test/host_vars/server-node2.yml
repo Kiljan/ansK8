@@ -1,0 +1,7 @@
+desired_state_basic: "present"
+# TCP	Inbound	10250	Kubelet API	Self, Control plane
+# TCP	Inbound	30000-32767	NodePort Services†	All
+# TCP   Wave NET 6783
+
+firewall_ports: [ {port: "10250", proto: "tcp"}, {port: "30000-32767", proto: "tcp"}, {port: "6783", proto: "tcp"} ]
+
