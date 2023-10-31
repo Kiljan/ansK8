@@ -1,19 +1,7 @@
 - name: Copy containerd script
   copy:
-    src: "con.sh"
+    src: "all.sh"
     dest: /home/vv/con.sh
     mode: '0711'
-
-- name: Copy kube script
-  copy:
-    src: "kube.sh"
-    dest: /home/vv/kube.sh
-    mode: '0711'
-
-# - name: install containerd
-#   command: sh /home/vv/con.sh
-
-# - name: install kube
-#   command: sh /home/vv/kube.sh
 
 
