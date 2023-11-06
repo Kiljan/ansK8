@@ -1,7 +1,2 @@
-- name: Copy containerd script
-  copy:
-    src: "all.sh"
-    dest: /home/vv/con.sh
-    mode: '0711'
-
-
+- name: Run a script
+  ansible.builtin.script: all.sh
