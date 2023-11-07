@@ -1,7 +1,11 @@
-- name: Copy containerd script
+- name: Run a script
+  ansible.builtin.script: all.sh
+
+
+- name: Copy after init K8s file
   copy:
-    src: "all.sh"
-    dest: /home/vv/con.sh
-    mode: '0711'
-
-
+    src: "set_up_after_init.sh"
+    dest: /home/vv
+    owner: vv
+    group: vv
+    mode: '0700'
