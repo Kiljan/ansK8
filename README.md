@@ -2,7 +2,7 @@
 Configure startup for K8
 
 
-To use this, you must first implement the terraform configuration from https://github.com/Kiljan/terra.git/ and https://github.com/Kiljan/ans.git
+To use this, you must first implement the terraform configuration from [Lab One Terraform](https://github.com/Kiljan/Lab-One-Terraform.git) and [Lab-Two-Ansible](https://github.com/Kiljan/Lab-Two-Ansible.git)
 
 Then use that repository, create a new Jenkins pipeline and run it. I use the localhost agent for this purpose (MAIN_ansibleK8).
 
@@ -30,4 +30,4 @@ pipeline {
 }
 ```
 
-This is part of a short series of articles from my Linkedin profile:  https://www.linkedin.com/pulse/devops-labs-free-part-1-piotr-kiljanek-njgof
+This is part of a short series of articles from my [Linkedin profile](https://www.linkedin.com/pulse/devops-labs-free-part-2-piotr-kiljanek-naysf/?trackingId=ROu4fF6bTq6J0BozUsBHrQ%3D%3D)
